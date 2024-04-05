@@ -13,7 +13,7 @@ from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
-    """Functionality for the HBNB console"""
+    """ Contains the functionality for the HBNB console"""
 
     # determines prompt for interactive/non-interactive modes
     prompt = '(hbnb) ' if sys.__stdin__.isatty() else ''
@@ -30,7 +30,7 @@ class HBNBCommand(cmd.Cmd):
              'latitude': float, 'longitude': float
             }
 
-`   `    def preloop(self):
+    def preloop(self):
         """Prints if isatty is false"""
         if not sys.__stdin__.isatty():
             print('(hbnb)')
